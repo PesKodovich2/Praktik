@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3"
+    android:background="#FFFFFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="388dp"
+                android:layout_marginTop="16dp"
+                app:srcCompat="@drawable/raketa" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Real-time Tracking"
+                android:textColor="#0000ff"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="297dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="12dp"
+                android:text="Track your packages/items from the comfort of your home till final destination"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="370dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="80dp"
+                android:backgroundTint="#0000FF"
+                android:text="Sing Up"
+                android:textColor="#FFFFFF"
+                app:strokeColor="#0000FF"
+                app:strokeWidth="2dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="200dp"
+                    android:layout_marginRight="10dp"
+                    android:text="Sign Up  Already have an account?" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="104dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="-10dp"
+                    android:backgroundTint="#FFFFFF"
+                    android:text="Sing In"
+                    android:textAlignment="center"
+                    android:textColor="#0000FF"
+                    android:textColorLink="#0000FF" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
