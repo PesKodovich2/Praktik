@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Lol"
         tools:targetApi="31">
         <activity
+            android:name=".OTPVerification"
+            android:exported="false" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="false" />
         <activity
@@ -30,9 +33,6 @@
         <activity
             android:name=".MainActivity3"
             android:exported="false" />
-
-
-
         <activity
             android:name=".MainActivity2"
             android:exported="false" /> <!-- SplashScreenActivity объявлена как экспортируемая и является точкой входа в приложение. -->
@@ -46,9 +46,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity> <!-- MainActivity объявлена без указания exported, что по умолчанию означает, что она не экспортируемая. -->
-        <activity android:name=".MainActivity" />
-
-
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>
