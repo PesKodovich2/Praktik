@@ -1,8 +1,5 @@
 package com.example.lol;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -14,7 +11,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
-
+import androidx.appcompat.app.AppCompatActivity;
 
 public class SignUp extends AppCompatActivity {
 
@@ -22,7 +19,6 @@ public class SignUp extends AppCompatActivity {
     private EditText editText1, editText2, editText3, editText4, editText5;
     private Button signUpButton;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +55,23 @@ public class SignUp extends AppCompatActivity {
                 if (signUpButton.isEnabled()) {
                     // Здесь может быть ваша логика обработки данных формы
                     Toast.makeText(SignUp.this, "Sign Up button clicked", Toast.LENGTH_SHORT).show();
-                    // Открытие lig_in.xml
+                    // Открытие LogIn.class
                     Intent intent = new Intent(SignUp.this, LogIn.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        // Добавление слушателя для кнопки с идентификатором button
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Здесь может быть ваша логика обработки данных формы
+                Toast.makeText(SignUp.this, "Button clicked", Toast.LENGTH_SHORT).show();
+                // Открытие activity_log_in.xml
+                Intent intent = new Intent(SignUp.this, LogIn.class);
+                startActivity(intent);
             }
         });
     }
