@@ -46,7 +46,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button2"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                android:layout_width="370dp"
+                android:layout_width="337dp"
                 android:layout_height="52dp"
                 android:layout_marginTop="80dp"
                 android:backgroundTint="#0000FF"

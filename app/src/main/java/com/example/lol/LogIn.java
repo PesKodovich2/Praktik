@@ -1,12 +1,5 @@
 package com.example.lol;
 
-import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -18,15 +11,14 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class LogIn extends AppCompatActivity {
 
     private CheckBox checkBox;
     private EditText editText3, editText4;
-    private Button logInButton;
+    private Button logInButton, forgotPasswordButton, signUpButton;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,11 +29,12 @@ public class LogIn extends AppCompatActivity {
         editText3 = findViewById(R.id.editText3);
         editText4 = findViewById(R.id.editText4);
         logInButton = findViewById(R.id.buttonLogIn);
+        forgotPasswordButton = findViewById(R.id.button3);
+        signUpButton = findViewById(R.id.button);
 
         // Добавление слушателей для полей ввода
         editText3.addTextChangedListener(textWatcher);
         editText4.addTextChangedListener(textWatcher);
-
 
         // Добавление слушателя для CheckBox
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -56,12 +49,27 @@ public class LogIn extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (logInButton.isEnabled()) {
-                    // Здесь может быть ваша логика обработки данных формы
                     Toast.makeText(LogIn.this, "Sign Up button clicked", Toast.LENGTH_SHORT).show();
-                    // Открытие lig_in.xml
                     Intent intent = new Intent(LogIn.this, Home.class);
                     startActivity(intent);
                 }
+            }
+        });
+
+        // Добавление слушателей для кнопок восстановления пароля и регистрации
+        forgotPasswordButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogIn.this, ForgotPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        signUpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LogIn.this, SignUp.class);
+                startActivity(intent);
             }
         });
     }
@@ -82,8 +90,7 @@ public class LogIn extends AppCompatActivity {
     private void checkFieldsAndButtonState() {
         boolean allFieldsFilled =
                 !editText3.getText().toString().isEmpty() &&
-                        !editText4.getText().toString().isEmpty() ;
-
+                        !editText4.getText().toString().isEmpty();
 
         boolean checkBoxChecked = checkBox.isChecked();
 
