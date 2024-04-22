@@ -27,7 +27,7 @@ public class NewPassword extends AppCompatActivity {
         editText1 = findViewById(R.id.editText1);
         editText2 = findViewById(R.id.editText2);
         buttonLogIn = findViewById(R.id.buttonLogIn);
-        textViewError = findViewById(R.id.textViewError); // Предполагается, что у вас есть TextView для отображения ошибок
+        textViewError = findViewById(R.id.textViewError);
 
         // Отключение кнопки по умолчанию
         buttonLogIn.setEnabled(false);
@@ -49,7 +49,7 @@ public class NewPassword extends AppCompatActivity {
                 if (!TextUtils.isEmpty(password1) && !TextUtils.isEmpty(password2)) {
                     buttonLogIn.setBackgroundColor(Color.parseColor("#0000FF"));
                 } else {
-                    buttonLogIn.setBackgroundColor(Color.parseColor("#808080")); // Вернуть исходный цвет, если в одно из полей не введен текст
+                    buttonLogIn.setBackgroundColor(Color.parseColor("#808080"));
                 }
 
                 // Проверка совпадения текстов и обновление ошибки
