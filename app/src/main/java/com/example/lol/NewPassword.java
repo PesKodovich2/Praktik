@@ -67,6 +67,7 @@ public class NewPassword extends AppCompatActivity {
 
         editText1.addTextChangedListener(textWatcher);
         editText2.addTextChangedListener(textWatcher);
+        //r
 
         buttonLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
